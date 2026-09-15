@@ -13,10 +13,33 @@ from services.verification_service import assess_job
 
 st.set_page_config(page_title="RemoteAI Jobs", page_icon="🌍", layout="wide", initial_sidebar_state="expanded")
 st.markdown("""<style>
- .block-container {max-width: 1240px; padding-top: 2.3rem;}
- [data-testid="stMetric"] {background:#f7f9fc; border:1px solid #e6ebf2; border-radius:12px; padding:10px;}
- .risk {font-size:.88rem; color:#506176;} .stButton>button {border-radius:9px;}
- </style>""", unsafe_allow_html=True)
+.block-container {
+    max-width: 1240px;
+    padding-top: 2.3rem;
+}
+
+[data-testid="stMetric"] {
+    background: #f7f9fc;
+    border: 1px solid #e6ebf2;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+[data-testid="stMetricValue"],
+[data-testid="stMetricLabel"],
+[data-testid="stMetricDelta"] {
+    color: #111827 !important;
+}
+
+.risk {
+    font-size: .88rem;
+    color: #506176;
+}
+
+.stButton>button {
+    border-radius: 9px;
+}
+</style>""", unsafe_allow_html=True)
 
 COUNTRIES = {"United Kingdom": "gb", "United States": "us", "Australia": "au", "Canada": "ca", "Germany": "de", "France": "fr", "India": "in", "Netherlands": "nl", "New Zealand": "nz", "Poland": "pl", "Brazil": "br", "Singapore": "sg"}
 FIELDS = ["Software Development", "Data Science", "AI/ML", "Cybersecurity", "UI/UX", "Digital Marketing", "Accounting", "Human Resources"]
